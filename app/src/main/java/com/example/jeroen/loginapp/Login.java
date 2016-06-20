@@ -3,23 +3,15 @@ package com.example.jeroen.loginapp;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-public class Login extends AppCompatActivity {
+
+public class Login{
 
     private static EditText username;
     private static EditText password;
@@ -127,43 +119,5 @@ public class Login extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
-    }
-
-    private static boolean sendPOST() throws IOException {
-        PostParams  = (String.format(username.getText().toString(), password.getText().toString()));
-        URL obj = new URL(POST_URL);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-        con.setRequestMethod("POST");
-        //con.setRequestProperty("User-Agent", USER_AGENT);
-
-        // For POST only - START
-        con.setDoOutput(true);
-        OutputStream os = con.getOutputStream();
-        os.write(PostParams.getBytes());
-        os.flush();
-        os.close();
-        // For POST only - END
-
-        int responseCode = con.getResponseCode();
-        System.out.println("POST Response Code :: " + responseCode);
-
-        if (responseCode == HttpURLConnection.HTTP_OK) { //success
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    con.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-
-            // print result
-            System.out.println(response.toString());
-            return true;
-        } else {
-            System.out.println("POST request not worked");
-            return true;
-        }
     }
 }
