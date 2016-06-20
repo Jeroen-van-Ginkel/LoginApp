@@ -18,64 +18,86 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="nrem1"
-        android:id="@+id/textView3"
+        android:id="@+id/editText_patient"
         android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="69dp" />
+        android:layout_marginTop="42dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:hint="patient" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="nrem2"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText_nrem1"
+        android:layout_below="@+id/editText_patient"
+        android:layout_alignLeft="@+id/editText_patient"
+        android:layout_alignStart="@+id/editText_patient"
+        android:layout_alignRight="@+id/editText_patient"
+        android:layout_alignEnd="@+id/editText_patient"
+        android:hint="nrem1" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="nrem3"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText_nrem2"
+        android:layout_below="@+id/editText_nrem1"
+        android:layout_alignLeft="@+id/editText_nrem1"
+        android:layout_alignStart="@+id/editText_nrem1"
+        android:layout_alignRight="@+id/editText_nrem1"
+        android:layout_alignEnd="@+id/editText_nrem1"
+        android:hint="nrem2" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="nrem4"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText_nrem3"
+        android:layout_below="@+id/editText_nrem2"
+        android:layout_alignLeft="@+id/editText_nrem2"
+        android:layout_alignStart="@+id/editText_nrem2"
+        android:layout_alignRight="@+id/editText_nrem2"
+        android:layout_alignEnd="@+id/editText_nrem2"
+        android:hint="nrem3" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="rem"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText_nrem4"
+        android:layout_below="@+id/editText_nrem3"
+        android:layout_alignLeft="@+id/editText_nrem3"
+        android:layout_alignStart="@+id/editText_nrem3"
+        android:layout_alignRight="@+id/editText_nrem3"
+        android:layout_alignEnd="@+id/editText_nrem3"
+        android:hint="nrem4" />
 
-    <TextView
+    <EditText
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="patientNumber"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText_rem"
+        android:layout_below="@+id/editText_nrem4"
+        android:layout_alignLeft="@+id/editText_nrem4"
+        android:layout_alignStart="@+id/editText_nrem4"
+        android:layout_alignRight="@+id/editText_nrem4"
+        android:layout_alignEnd="@+id/editText_nrem4"
+        android:hint="rem" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/button_send"
+        android:layout_below="@+id/editText_rem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
 </RelativeLayout>

@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
     private static EditText username;
     private static EditText password;
     private static Button login_button;
-    private static boolean OnlinePassTest = true;
+    private static boolean OnlinePassTest = false;
     private static boolean loginSuccess = false;
     private static boolean isStaff = false;
     private static String token;
